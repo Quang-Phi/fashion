@@ -3,6 +3,7 @@ import ReactPaginate from "react-paginate";
 import Loading from "../Loading/Loading";
 import Product from "../Product/Product";
 import uuid from "react-uuid";
+import { scrollToTop } from "../../Service/utils";
 
 export function Pagination(props) {
   const { list, loading } = props;
@@ -19,6 +20,7 @@ export function Pagination(props) {
   }, [itemOffset, itemsPerPage, list]);
 
   const handlePageClick = (event) => {
+    scrollToTop();
     const newOffset = (event.selected * itemsPerPage) % list.length;
     setItemOffset(newOffset);
   };
@@ -28,7 +30,11 @@ export function Pagination(props) {
         <Loading />
       ) : currentItems.length === 0 ? (
         <div className="content-wraper">
-          <img src="https://i.postimg.cc/vBTVcJpd/page-not-found.jpg" alt="" />
+          <img
+            loading="lazy"
+            src="https://i.postimg.cc/vBTVcJpd/page-not-found.jpg"
+            alt=""
+          />
         </div>
       ) : (
         <>

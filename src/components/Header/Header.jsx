@@ -41,7 +41,7 @@ export default function () {
         return;
       }
       setListSearch([]);
-    } catch (error) { }
+    } catch (error) {}
   };
 
   useEffect(() => {
@@ -57,7 +57,11 @@ export default function () {
           <div className="header-left">
             <div className="header-logo">
               <NavLink to={"/"} end>
-                <img src="https://i.postimg.cc/0yk7sMmJ/logo.png" alt="" />
+                <img
+                  loading="lazy"
+                  src="https://i.postimg.cc/0yk7sMmJ/logo.png"
+                  alt=""
+                />
               </NavLink>
             </div>
             <div className="header-menu">
@@ -74,7 +78,7 @@ export default function () {
                 <div className="menu-inner">
                   <div
                     onClick={() => {
-                      setOpenMenumobile(false);
+                      handleOpen(openMenuMobile, setOpenMenumobile);
                     }}
                     className="close-button"
                   >
@@ -90,26 +94,29 @@ export default function () {
                     </li>
                     <li>
                       <div
-                        className={`item-inner ${checkElementActive(listMenuActive, "1")
-                          ? "active"
-                          : ""
-                          }`}
+                        className={`item-inner ${
+                          checkElementActive(listMenuActive, "1")
+                            ? "active"
+                            : ""
+                        }`}
                       >
                         <Link to={"/shop-fashion/shop"}>Products Page</Link>
                       </div>
                       <div
-                        className={`sub-list-menu ${checkElementActive(listMenuActive, "1")
-                          ? "active"
-                          : ""
-                          }`}
+                        className={`sub-list-menu ${
+                          checkElementActive(listMenuActive, "1")
+                            ? "active"
+                            : ""
+                        }`}
                       ></div>
                     </li>
                     <li>
                       <div
-                        className={`item-inner ${checkElementActive(listMenuActive, "2")
-                          ? "active"
-                          : ""
-                          }`}
+                        className={`item-inner ${
+                          checkElementActive(listMenuActive, "2")
+                            ? "active"
+                            : ""
+                        }`}
                       >
                         <span>Categories</span>
                         <i
@@ -121,18 +128,20 @@ export default function () {
                               e.target.id
                             );
                           }}
-                          className={`fa-solid fa-angle-right ${checkElementActive(listMenuActive, "2")
-                            ? "active"
-                            : ""
-                            } `}
+                          className={`fa-solid fa-angle-right ${
+                            checkElementActive(listMenuActive, "2")
+                              ? "active"
+                              : ""
+                          } `}
                         ></i>
                       </div>
 
                       <div
-                        className={`sub-list-menu ${checkElementActive(listMenuActive, "2")
-                          ? "active"
-                          : ""
-                          }`}
+                        className={`sub-list-menu ${
+                          checkElementActive(listMenuActive, "2")
+                            ? "active"
+                            : ""
+                        }`}
                       >
                         <li>
                           <Link to={"/shop-fashion/hoodies"} end>
@@ -158,10 +167,11 @@ export default function () {
                     </li>
                     <li>
                       <div
-                        className={`sub-list-menu ${checkElementActive(listMenuActive, "3")
-                          ? "active"
-                          : ""
-                          }`}
+                        className={`sub-list-menu ${
+                          checkElementActive(listMenuActive, "3")
+                            ? "active"
+                            : ""
+                        }`}
                       >
                         <li>
                           <a href="#">Our Blog</a>
@@ -221,6 +231,7 @@ export default function () {
                               <div className="content-wraper">
                                 <div className="content-element">
                                   <img
+                                    loading="lazy"
                                     src="https://i.postimg.cc/fy1RSptM/mega-menu-2.jpg"
                                     alt=""
                                   />
@@ -234,6 +245,7 @@ export default function () {
                                 </div>
                                 <div className="content-element">
                                   <img
+                                    loading="lazy"
                                     src="https://i.postimg.cc/Y99rnMQp/mega-menu-3.jpg"
                                     alt=""
                                   />
@@ -246,6 +258,7 @@ export default function () {
                                 </div>
                                 <div className="content-element">
                                   <img
+                                    loading="lazy"
                                     src="https://i.postimg.cc/zfDHNmTQ/mega-menu-1.jpg"
                                     alt=""
                                   />
@@ -269,6 +282,7 @@ export default function () {
                                   <div className="col-lg-4">
                                     <div className="content-element">
                                       <img
+                                        loading="lazy"
                                         src="https://codex-themes.com/thegem/sites/shop-creative-fashion/wp-content/uploads/2022/07/1.svg"
                                         alt=""
                                       />
@@ -277,6 +291,7 @@ export default function () {
                                   <div className="col-lg-4">
                                     <div className="content-element">
                                       <img
+                                        loading="lazy"
                                         src="https://codex-themes.com/thegem/sites/shop-creative-fashion/wp-content/uploads/2022/06/3.svg"
                                         alt=""
                                       />
@@ -285,6 +300,7 @@ export default function () {
                                   <div className="col-lg-4">
                                     <div className="content-element">
                                       <img
+                                        loading="lazy"
                                         src="https://codex-themes.com/thegem/sites/shop-creative-fashion/wp-content/uploads/2022/06/5.svg"
                                         alt=""
                                       />
@@ -296,18 +312,21 @@ export default function () {
                                 <div className="content-wraper">
                                   <div className="col-lg-4">
                                     <img
+                                      loading="lazy"
                                       src="https://codex-themes.com/thegem/sites/shop-creative-fashion/wp-content/uploads/2022/06/6.svg"
                                       alt=""
                                     />
                                   </div>
                                   <div className="col-lg-4">
                                     <img
+                                      loading="lazy"
                                       src="https://codex-themes.com/thegem/sites/shop-creative-fashion/wp-content/uploads/2022/06/7.svg"
                                       alt=""
                                     />
                                   </div>
                                   <div className="col-lg-4">
                                     <img
+                                      loading="lazy"
                                       src="https://codex-themes.com/thegem/sites/shop-creative-fashion/wp-content/uploads/2022/06/8.svg"
                                       alt=""
                                     />
@@ -349,8 +368,9 @@ export default function () {
                   onClick={() => {
                     handleOpen(searchOpen, setSearchOpen);
                   }}
-                  className={`fa-solid fa-magnifying-glass ${searchOpen ? "unactive" : ""
-                    }`}
+                  className={`fa-solid fa-magnifying-glass ${
+                    searchOpen ? "unactive" : ""
+                  }`}
                 ></i>
                 <div className={`search-content ${searchOpen ? "active" : ""}`}>
                   <input
@@ -363,12 +383,12 @@ export default function () {
                     placeholder="Start typing to Search..."
                   />
                   <div
+                    className="search-close"
                     onClick={() => {
                       setSearchText([]);
                       setListSearch([]);
-                      setSearchOpen(false);
+                      handleOpen(searchOpen, setSearchOpen);
                     }}
-                    className="search-close"
                   >
                     <i className="fa-solid fa-xmark"></i>
                   </div>
@@ -407,7 +427,10 @@ export default function () {
                     ) : loading ? (
                       <Loading />
                     ) : listSearch.length === 0 ? (
-                      <img src="https://i.postimg.cc/CMZZ5P6q/empty-state.webp" />
+                      <img
+                        loading="lazy"
+                        src="https://i.postimg.cc/CMZZ5P6q/empty-state.webp"
+                      />
                     ) : (
                       <div className="result-wraper">
                         {listSearch.map((element) => {
@@ -439,6 +462,7 @@ export default function () {
                       })
                     ) : (
                       <img
+                        loading="lazy"
                         src="https://i.postimg.cc/CMZZ5P6q/empty-state.webp"
                         alt=""
                       />

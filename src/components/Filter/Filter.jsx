@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { componentUnmount } from "../../Service/utils";
 
 export default function (props) {
   const {
@@ -24,7 +25,7 @@ export default function (props) {
               fieldCategoryActive === "shop" ? "active" : ""
             }`}
           >
-            <Link className="item" to="/shop-fashion/shop">
+            <Link onClick={componentUnmount()} className="item" to="/shop-fashion/shop">
               <h3 className="item-title">All</h3>
             </Link>
           </li>

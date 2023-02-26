@@ -106,7 +106,7 @@ export default function () {
   return (
     <div id="products-page">
       <div className="container-fluit">
-        {/* <Header /> */}
+        <Header />
         <div id="banner">
           <div className="banner-inner">
             <h1>{params.category}</h1>
@@ -128,13 +128,13 @@ export default function () {
                             Clear Filter
                           </button>
                           <button
+                            className="show-filter"
                             onClick={() => {
                               handleOpen(
                                 asideFilterActive,
                                 setAsideFilterActive
                               );
                             }}
-                            className="show-filter"
                           >
                             <i className="fa-solid fa-sliders"></i>
                             <span>Show Fillter</span>

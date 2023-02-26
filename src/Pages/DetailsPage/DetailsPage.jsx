@@ -106,7 +106,7 @@ export default function () {
       ) : (
         <div className="container-fluit">
           <Toast />
-          {/* <Header /> */}
+          <Header />
           {product ? (
             <div className="main">
               <div className="container">
@@ -116,16 +116,16 @@ export default function () {
                       <div className="product-gallery">
                         <Tabs>
                           <TabPanel>
-                            <img src={product.productUrlImg[0]} alt="" />
+                            <img loading="lazy" src={product.productUrlImg[0]} alt="" />
                           </TabPanel>
                           <TabPanel>
-                            <img
+                            <img loading="lazy"
                               src="https://i.postimg.cc/qMw741vT/hoodies-2.jpg"
                               alt=""
                             />
                           </TabPanel>
                           <TabPanel>
-                            <img
+                            <img loading="lazy"
                               src="https://i.postimg.cc/7ZLZ6S5T/hoodies-2-1.jpg"
                               alt=""
                             />
@@ -133,16 +133,16 @@ export default function () {
 
                           <TabList>
                             <Tab>
-                              <img src={product.productUrlImg[0]} alt="" />
+                              <img loading="lazy" src={product.productUrlImg[0]} alt="" />
                             </Tab>
                             <Tab>
-                              <img
+                              <img loading="lazy"
                                 src="https://i.postimg.cc/qMw741vT/hoodies-2.jpg"
                                 alt=""
                               />
                             </Tab>
                             <Tab>
-                              <img
+                              <img loading="lazy"
                                 src="https://i.postimg.cc/7ZLZ6S5T/hoodies-2-1.jpg"
                                 alt=""
                               />
@@ -244,7 +244,7 @@ export default function () {
                               id consequuntur amet asperiores eaque!
                             </p>
                             <p className="brand">
-                              <img
+                              <img loading="lazy"
                                 src="https://i.postimg.cc/VL9CGj6b/product-page-1-1.jpg"
                                 alt=""
                               />
@@ -288,7 +288,7 @@ export default function () {
                                 return (
                                   <div key={uuid()} className="comment-element">
                                     <div className="reviewer">
-                                      <img
+                                      <img loading="lazy"
                                         src="https://i.postimg.cc/HLZw6TXn/th.jpg"
                                         alt=""
                                       />

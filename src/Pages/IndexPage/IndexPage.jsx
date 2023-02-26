@@ -24,16 +24,6 @@ export default function () {
   const [listForMan] = useFetchData("for-man", 1, "");
   const [listForWoMen] = useFetchData("for-women", 1, "");
 
-  const [scroll, setScrollY] = useState(0);
-  const handleScrollY = (e) => {
-    setScrollY(e.currentTarget.scrollY);
-  };
-
-
-  useEffect(() => {
-    window.addEventListener("scroll", (e) => handleScrollY(e));
-  }, []);
-
   return (
     <div id="index-page">
       <div className="container-fluit">
@@ -42,9 +32,15 @@ export default function () {
         <div id="banner">
           <div className="container">
             <div className="banner-content">
-              <div className="banner-text">
+              <div
+                className="banner-text"
+                data-aos="fade-up"
+                data-aos-duration="600"
+              >
                 An exclusive selection of this
-                <span>season's trends</span>
+                <span data-aos="zoom-out-up" data-aos-duration="1000">
+                  season's trends
+                </span>
               </div>
             </div>
           </div>
@@ -57,8 +53,15 @@ export default function () {
                   <Link
                     to={"/shop-fashion/for-women"}
                     className="category-item"
+                    data-aos="fade-right"
+                    data-aos-easing="linear"
+                    data-aos-duration="600"
                   >
-                    <img src="https://i.postimg.cc/6p6CDV3C/women.jpg" alt="" />
+                    <img
+                      loading="lazy"
+                      src="https://i.postimg.cc/6p6CDV3C/women.jpg"
+                      alt=""
+                    />
                     <div className="title">
                       <h1>For Women</h1>
                       <span>{listForWoMen.length} products</span>
@@ -66,8 +69,18 @@ export default function () {
                   </Link>
                 </div>
                 <div className="col-lg-6 col-md-6 col-12">
-                  <Link to={"/shop-fashion/for-man"} className="category-item">
-                    <img src="https://i.postimg.cc/x8hpt1Ks/man.jpg" alt="" />
+                  <Link
+                    to={"/shop-fashion/for-man"}
+                    className="category-item"
+                    data-aos="fade-left"
+                    data-aos-easing="linear"
+                    data-aos-duration="600"
+                  >
+                    <img
+                      loading="lazy"
+                      src="https://i.postimg.cc/x8hpt1Ks/man.jpg"
+                      alt=""
+                    />
                     <div className="title">
                       <h1>For Man</h1>
                       <span>{listForMan.length} products</span>
@@ -78,9 +91,13 @@ export default function () {
             </div>
 
             <div className="products-trending">
-              <div style={scroll>1600?{opacity:1,transition: '1s',transform: 'translateY(0)'}:{}} className="header-text">
-                <h1>Energize</h1>
-                <span>look</span>
+              <div className="header-text">
+                <h1 data-aos="fade-up" data-aos-duration="600">
+                  Energize
+                </h1>
+                <span data-aos="fade-up" data-aos-duration="800">
+                  look
+                </span>
               </div>
 
               <div className="trending-content">
@@ -101,9 +118,13 @@ export default function () {
                 </div>
               </div>
 
-              <div style={scroll>2900?{opacity:1,transition: '1s',transform: 'translateY(0)'}:{}} className="bottom-text">
-                <h1>Trending</h1>
-                <span>outfits</span>
+              <div className="bottom-text">
+                <h1 data-aos="fade-up" data-aos-duration="600">
+                  Trending
+                </h1>
+                <span data-aos="fade-up" data-aos-duration="800">
+                  outfits
+                </span>
               </div>
             </div>
 
@@ -114,8 +135,12 @@ export default function () {
                     <Link
                       to={"/shop-fashion/sneaker"}
                       className="classify-item"
+                      data-aos="zoom-out"
+                      data-aos-duration="600"
+                      data-aos-easing="linear"
                     >
                       <img
+                        loading="lazy"
                         src="https://i.postimg.cc/brVQjZ7r/classify-1.jpg"
                         alt=""
                       />
@@ -129,8 +154,12 @@ export default function () {
                     <Link
                       to={"/shop-fashion/hoodies"}
                       className="classify-item"
+                      data-aos="fade-left"
+                      data-aos-duration="600"
+                      data-aos-easing="linear"
                     >
                       <img
+                        loading="lazy"
                         src="https://i.postimg.cc/hP7JGZxp/classify-2.webp"
                         alt=""
                       />
@@ -146,8 +175,15 @@ export default function () {
               <div className="row">
                 <div className="classify-wraper">
                   <div className="col-8 col-md-8 col-12">
-                    <Link to={"/shop-fashion/bag"} className="classify-item">
+                    <Link
+                      to={"/shop-fashion/bag"}
+                      className="classify-item"
+                      data-aos="fade-right"
+                      data-aos-duration="600"
+                      data-aos-easing="linear"
+                    >
                       <img
+                        loading="lazy"
                         src="https://i.postimg.cc/26sPz5nk/classify-3.webp"
                         alt=""
                       />
@@ -161,8 +197,12 @@ export default function () {
                     <Link
                       to={"/shop-fashion/t-shirt"}
                       className="classify-item"
+                      data-aos="zoom-out"
+                      data-aos-duration="600"
+                      data-aos-easing="linear"
                     >
                       <img
+                        loading="lazy"
                         src="https://i.postimg.cc/RCGDsGDC/classify-4.webp"
                         alt=""
                       />
@@ -220,16 +260,29 @@ export default function () {
                     <div className="row">
                       <div className="imgs">
                         <div className="col-lg-6 col-md-6 col-12">
-                          <div className="custom-item">
+                          <div
+                            className="custom-item"
+                            data-aos="fade-right"
+                            data-aos-easing="linear"
+                            data-aos-duration="600"
+                            data-aos-delay="300"
+                          >
                             <img
+                              loading="lazy"
                               src="https://i.postimg.cc/HnZjqp4Y/custom1.jpg"
                               alt=""
                             />
                           </div>
                         </div>
                         <div className="col-lg-6 col-md-6 col-12">
-                          <div className="custom-item">
+                          <div
+                            className="custom-item"
+                            data-aos="fade-right"
+                            data-aos-easing="linear"
+                            data-aos-duration="300"
+                          >
                             <img
+                              loading="lazy"
                               src="https://i.postimg.cc/c12mjYT8/custom2.jpg"
                               alt=""
                             />
@@ -240,16 +293,30 @@ export default function () {
                     <div className="row">
                       <div className="imgs">
                         <div className="col-lg-6 col-md-6 col-12">
-                          <div className="custom-item">
+                          <div
+                            className="custom-item"
+                            data-aos="fade-right"
+                            data-aos-easing="linear"
+                            data-aos-duration="600"
+                            data-aos-delay="1200"
+                          >
                             <img
+                              loading="lazy"
                               src="https://i.postimg.cc/NFX2HK3K/custom3.jpg"
                               alt=""
                             />
                           </div>
                         </div>
                         <div className="col-lg-6 col-md-6 col-12">
-                          <div className="custom-item">
+                          <div
+                            className="custom-item"
+                            data-aos="fade-right"
+                            data-aos-easing="linear"
+                            data-aos-duration="600"
+                            data-aos-delay="900"
+                          >
                             <img
+                              loading="lazy"
                               src="https://i.postimg.cc/nVTqqm9D/custom4.jpg"
                               alt=""
                             />
@@ -263,16 +330,28 @@ export default function () {
                   <div className="wraper-right">
                     <div className="custom-item">
                       <img
+                        loading="lazy"
                         src="https://i.postimg.cc/XJZjDT7F/custom5.jpg"
                         alt=""
                       />
                       <div className="custom-item-content">
                         <div className="item-heading">
                           <img
+                            loading="lazy"
                             src="https://i.postimg.cc/zXdsYQZh/Logo-Shopee.png"
                             alt=""
+                            data-aos="fade-right"
+                            data-aos-easing="linear"
+                            data-aos-duration="600"
+                            data-aos-delay="600"
                           />
-                          <span>THEGEM</span>
+                          <span
+                            data-aos="fade-up"
+                            data-aos-easing="linear"
+                            data-aos-duration="600"
+                          >
+                            THEGEM
+                          </span>
                         </div>
                         <button className="item-button">
                           <a href="">Shop by Shopee</a>
@@ -288,11 +367,25 @@ export default function () {
           <div className="container">
             <div className="final-sale">
               <div className="final-sale-item">
-                <span>Final sale</span>
-                <span>40% OFF</span>
+                <span
+                  data-aos="fade-up"
+                  data-aos-easing="linear"
+                  data-aos-duration="600"
+                >
+                  Final sale
+                </span>
+                <span
+                  data-aos="fade-up"
+                  data-aos-easing="linear"
+                  data-aos-duration="800"
+                >
+                  40% OFF
+                </span>
               </div>
               <div className="final-sale-item right">
-                <h1>
+                <h1  data-aos="fade-left"
+                  data-aos-easing="linear"
+                  data-aos-duration="800">
                   An has feugiat vivendum, ad vix tacimates cum commune
                   lucilius!
                 </h1>

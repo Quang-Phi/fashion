@@ -31,7 +31,7 @@ export default function (props) {
           <i className="fa-solid fa-trash"></i>
         </div>
         <div className="product-img">
-          <img src={product.productUrlImg[0]} alt="" />
+          <img loading="lazy" src={product.productUrlImg[0]} alt="" />
         </div>
         <div className="product-info">
           <div className="product-categories">
